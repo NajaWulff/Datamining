@@ -1,0 +1,75 @@
+\documentclass[10pt,a4paper,danish]{article}
+%% Indlæs ofte brugte pakker
+\usepackage{amssymb}
+\usepackage[danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{mathpazo}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+			
+\rhead{Naja Mottelson\\vsj465}
+\lhead{\today}
+\rfoot{\thepage}
+
+% Opsæt indlæsning af filer
+\lstset{
+  language=SQL,
+  extendedchars=\true,
+  inputencoding=utf8,
+  linewidth=\textwidth, basicstyle=\small,
+  numbers=left, numberstyle=\footnotesize,
+  tabsize=2, showstringspaces=false,
+  breaklines=true, breakatwhitespace=false,
+}
+
+%% Titel og forfatter
+\title{Second Assignment \\ Databases and datammining \\Spring 2012}
+\author{Naja Mottelson}
+
+%% Start dokumentet
+\begin{document}
+
+%% Vis titel
+\maketitle
+\newpage
+
+%% HER STARTER RAPPORTEN
+
+\section{Fish Length}
+\subsection{Mean and variance}
+I have calculated the mean fish length and variance with a small
+script in python (contained in the file datamining1.1.py). These
+calculations have given me a mean fish length of 2236.25 centimetres
+and a mean variance of 1193578.0 centimetres. 
+
+\subsection{Linear regression}
+Again, I have programmed both the affine linear model and the mean
+squared variance in a minor python script (contained in the file
+datamining1.2.py). In the script, I initially collect the input data
+(age, temperature) and response data (fish length) from the database,
+and turn them into float matrices - respectively a 3x24 matrix padded
+with ones\footnote{In correspondance with the prescription given for
+  the data matrix in (3.3) in the lecture notes.} and a 1x24 matrix
+saved in the variables \texttt{input_matrix} and
+\texttt{response_matrix}. I then compute the optimal parameters of the
+algorithm described by the formula (3.5) in the lecture notes, saving
+the result in the variable \texttt{wT}.
+
+Deliverables: description of software used; mean-squared error;
+parameters of the regression model; brief discussion relating
+mean-squared-error to the biased sample variance
+
+
+\section{Proteins in yeast}
+
+\subsection{1-Nearest Neighbour}
+
+\subsection{Dimensionality reduction}
+
+
+\end{document}
